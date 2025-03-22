@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan's Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--------------------------------------------------- Header/ Navigation Section -------------->
+    <div id="header">
+         <!-- Navigation Bar -->
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#my-projects">Portfolio</a></li>
+                <li><a href="#tools">My Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Content for Header - Restructured to use side-by-side layout -->
+        <div class="header-content">
+            <div class="header-text-container">
+                <div class="header-text">
+                    <h1>Welcome, I am <span class="highlight-name">Jonathan (Johnny) Leathem</span></h1>
+                </div>
+                <div class="subtitle-text">
+                    <p>CS & Math @ UoM</p>
+                </div>
+            </div>
+            <div class="headshot-image">
+                <img src="Images/Student ID Photo.jpg" alt="Jonathan Leathem">
+            </div>
+        </div>
+    </div>
+
+    <!--About ----------------------------------------------------------------------------------------------------------->
+    <div id="about-me">
+            <div class="column">
+                <div class="about-col-1">
+                    <h1 class="about-col-1">Who am I?</h1>
+                    <p>Hi! I'm Jonathan (Johnny) Leathem, an outgoing and passionate problem-solver with a love for technology, mathematics, and creativity.
+                         I thrive in collaborative environments, always eager to connect with new people and tackle challenges head-on.
+                         Whether it's developing innovative software, diving deep into complex algorithms, or brainstorming fresh ideas, I bring energy, curiosity, and enthusiasm to everything I do.
+                         My journey in Computer Science and Mathematics at the University of Manchester has fueled my analytical thinking and technical skills, but what truly drives me is the excitement of learning, growing, and making a real impact.
+                         Let's build something amazing together! 🚀
+                </div>
+                <div class="about-col-2">
+                    <p class="tab-link active-link" onclick="openinfo('experience')">Experience</p>
+                    <p class="tab-link" onclick="openinfo('skills')">Skills</p>
+                    <p class="tab-link" onclick="openinfo('hobbies')">Hobbies</p>
+                </div>
+                <div class="about-col-3 active-tab" id="experience">
+                    <ul>
+                        <li>Experience content goes here</li>
+                    </ul>
+                </div>
+                <div class="about-col-3" id="skills">
+                    <ul>
+                        <li>Skills content goes here</li>
+                    </ul>    
+                </div>
+                <div class="about-col-3" id="hobbies">
+                    <ul>
+                        <li>Hobbies content goes here</li>
+                    </ul>
+                </div>
+          </div>
+    </div>
+
+
+    <!---Projects Section -------------------------------------------------------------------------------------------------->
+    <div id = "my-projects">
+        <div class="column">
+            <div class="about-col-1">
+                <p>Blah projects Blah</p>
+            </div>
+            <div class="about-col-2">
+                <h1 class="about-col-1">My Projects</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--My Tools------------------------------------------------------------------------------------------------------>
+    <div id = "tools">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">Tools of the Trade</h1>
+            </div>
+            <div class="about-col-2">
+                <p>Tools...</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Contact --------------------------------------------------------------------------------------------->
+    <div id = "contact">
+        <div class="column">
+            <div class="about-col-1">
+                <p>Contact info</p>
+                <ul>
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+            </div>
+            <div class="about-col-2">
+                <h1 class="about-col-1">Contact Me</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--- JS Functionality-->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tablecontents = document.getElementsByClassName("about-col-3");
+        
+        function openinfo(tabname) {
+            for(var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for(var i = 0; i < tablecontents.length; i++) {
+                tablecontents[i].classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // First, let's create an Intersection Observer to detect when elements come into view
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('#about-me, #my-projects, #tools, #contact');
+    
+    // Remove the initial animation styling that's currently applied in CSS
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.animation = 'none';
+    });
+    
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the element is in the viewport
+            if (entry.isIntersecting) {
+                // Get the element ID to determine which animation to apply
+                const elementId = entry.target.id;
+                
+                // Apply the appropriate animation based on the element ID
+                if (elementId === 'about-me' || elementId === 'tools') {
+                    entry.target.style.animation = 'fadeInLeft 1s ease-out forwards';
+                } else if (elementId === 'my-projects' || elementId === 'contact') {
+                    entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
+                }
+                
+                // Once the animation has been applied, unobserve the element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.20
+    });
+    
+    // Observer each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+    </script>
+</body>
+</html>

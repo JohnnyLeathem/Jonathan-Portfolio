@@ -1,0 +1,288 @@
+:root {
+    --primary-color: #154920;
+    --background-color: #b3cebba1;
+    --sidebar-color: #92b09ba1;
+    --text-color: #14171a;
+    --secondary-text: #657786;
+    --border-color: #e1e8ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background-color);
+}
+
+/* Modified header section to use flexbox layout */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Create a container for the header content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Style for the text container on the left */
+.header-text-container {
+    flex: 1;
+    padding-right: 35px;
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.header-text {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeInLeft 1s ease-out 0.3s forwards;
+}
+
+.subtitle-text {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease-out 0.6s forwards; /* Slightly longer delay for below text */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.highlight-name {
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
+/* Style for the image container on the right */
+.headshot-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.headshot-image img {
+    max-width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--background-color);
+}
+
+
+.about-col-1, .about-col-2 {
+    width: 65%, 35%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-col-3 {
+    display: none; /* Hide all tabs by default */
+}
+
+.active-tab {
+    display: block; /* Show only the active tab */
+}
+
+.tab-link {
+    cursor: pointer;
+}
+
+.active-link {
+    /* Style for the active tab link */
+    font-weight: bold;
+}
+
+#about-me {
+    background: rgba(13, 73, 13, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(14, 55, 14, 0.5); /* Slightly darker green border */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px; /* Space inside the box */
+    margin: 30px auto; /* Center the box and give spacing */
+    width: 90%; /* Adjust width to fit nicely */
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
+    backdrop-filter: blur(5px); /* Adds a glass effect */
+}
+
+.repeating-image {
+    width: 100%;
+    height: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.repeating-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/green_break.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+#my-projects {
+    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px; /* Space inside the box */
+    margin: 30px auto; /* Center the box and give spacing */
+    width: 90%; /* Adjust width to fit nicely */
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
+    backdrop-filter: blur(5px); /* Adds a glass effect */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    padding: 15px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 5px 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+nav ul li a:hover {
+    outline: 2px solid rgba(34, 139, 34, 0.5);
+    background: rgb(229, 252, 232);
+}
+
+#tools {
+    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px; /* Space inside the box */
+    margin: 30px auto; /* Center the box and give spacing */
+    width: 90%; /* Adjust width to fit nicely */
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
+    backdrop-filter: blur(5px); /* Adds a glass effect */
+}
+
+#contact {
+    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px; /* Space inside the box */
+    margin: 30px auto; /* Center the box and give spacing */
+    width: 90%; /* Adjust width to fit nicely */
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
+    backdrop-filter: blur(5px); /* Adds a glass effect */
+}
+
+#about-me, #my-projects, #tools, #contact {
+    opacity: 0;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-text-container {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .header-text, .subtitle-text {
+        text-align: center;
+    }
+    
+    .headshot-image {
+        justify-content: center;
+    }
+}
