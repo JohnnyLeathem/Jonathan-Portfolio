@@ -5,6 +5,7 @@
     --text-color: #14171a;
     --secondary-text: #657786;
     --border-color: #e1e8ed;
+    --hover-color: rgb(229, 252, 232);
 }
 
 * {
@@ -42,7 +43,7 @@ body {
 .header-text-container {
     flex: 1;
     padding-right: 35px;
-    animation: fadeInLeft 1s ease-out forwards;
+    animation: fadeInLeft 0.7s ease-out forwards;
 }
 
 .header-text {
@@ -64,7 +65,7 @@ body {
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateX(-120px);
     }
     100% {
         opacity: 1;
@@ -76,14 +77,13 @@ body {
 @keyframes fadeInRight {
     0% {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(120px);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
-
 
 
 
@@ -110,7 +110,7 @@ body {
     display: flex;
     justify-content: flex-end;
     opacity: 0;
-    animation: fadeIn 1s ease-out 0.8s forwards;
+    animation: fadeInRight 0.7s ease-out forwards;
 }
 
 @keyframes fadeIn {
@@ -133,44 +133,244 @@ body {
 }
 
 
+h1.about-col-1 {
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.about-col-1 p:first-of-type {
+    margin-bottom: 15px;
+}
+
+.about-col-1 p {
+    font-size: 20px;
+}
+
+
+
+
+
+.top_tab {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.about-col-3 li {
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .about-col-1, .about-col-2 {
-    width: 65%, 35%;
+    width: 40%, 60%;
     padding: 10px;
     box-sizing: border-box;
 }
+
+.about-col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .column {
     display: flex;
     flex-direction: row;
     margin-top: 15px;
     margin-bottom: 15px;
+    gap: 20px;
 }
 
 .about-col-3 {
     display: none; /* Hide all tabs by default */
+    height: 100%;
+    width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .active-tab {
     display: block; /* Show only the active tab */
+    height: 100%;
 }
+
+.active-tab ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+
+
+
+
+.active-tab li {
+    margin-bottom: 10px;
+}
+
+
 
 .tab-link {
     cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
 }
 
-.active-link {
-    /* Style for the active tab link */
+
+.tab-link:hover {
+    background: var(--hover-color);
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    height: 220px;
+    width: 220px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.content::-webkit-scrollbar {
+    width: 10px; /* Edit this to change width of scrollbar */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #79a677;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background-color: #558053;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the active tab link */
+.tab-link.active-link {
+    background-color: var(--hover-color);
     font-weight: bold;
 }
 
 #about-me {
-    background: rgba(13, 73, 13, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(14, 55, 14, 0.5); /* Slightly darker green border */
+    background: rgba(69, 181, 69, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(27, 148, 27, 0.5); /* Slightly darker green border */
     border-radius: 15px; /* Rounded edges */
     padding: 20px; /* Space inside the box */
     margin: 30px auto; /* Center the box and give spacing */
     width: 90%; /* Adjust width to fit nicely */
-    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
+    box-shadow: 0 4px 10px rgba(14, 171, 14, 0.2); /* Soft green shadow */
     backdrop-filter: blur(5px); /* Adds a glass effect */
 }
 
@@ -196,8 +396,8 @@ body {
 }
 
 #my-projects {
-    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
+    background: rgba(55, 159, 55, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(22, 148, 22, 0.5); /* Slightly darker green border */
     border-radius: 15px; /* Rounded edges */
     padding: 20px; /* Space inside the box */
     margin: 30px auto; /* Center the box and give spacing */
@@ -235,30 +435,142 @@ nav ul li a {
 
 nav ul li a:hover {
     outline: 2px solid rgba(34, 139, 34, 0.5);
-    background: rgb(229, 252, 232);
+    background: var(--hover-color);
 }
 
 #tools {
-    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
+    background: rgba(42, 124, 42, 0.2); /* Light green transparent background */
+    border: 2px solid rgba(18, 125, 18, 0.5); /* Slightly darker green border */
     border-radius: 15px; /* Rounded edges */
     padding: 20px; /* Space inside the box */
     margin: 30px auto; /* Center the box and give spacing */
     width: 90%; /* Adjust width to fit nicely */
     box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
     backdrop-filter: blur(5px); /* Adds a glass effect */
+    margin-bottom: 45px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #contact {
-    background: rgba(34, 139, 34, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(34, 139, 34, 0.5); /* Slightly darker green border */
-    border-radius: 15px; /* Rounded edges */
-    padding: 20px; /* Space inside the box */
-    margin: 30px auto; /* Center the box and give spacing */
-    width: 90%; /* Adjust width to fit nicely */
-    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
-    backdrop-filter: blur(5px); /* Adds a glass effect */
+    background: black;
+    color: white;
+    padding: 60px 20px; /* Space inside the box */
+    margin: 0;
+    width: 100%; /* Adjust width to fit nicely */
+    position: relative;
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 3%;
 }
+
+#contact .about-col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact .other_contacts {
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+}
+
+#contact .other_contacts li {
+    display: inline-block;
+}
+
+#contact .other_contacts i {
+    font-size: 34px;
+}
+
+#contact .other_contacts i:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color);
+}
+
+/* Style for icons inside links */
+#contact .other_contacts a {
+    text-decoration: none; /* Remove underline */
+    color: var(--background-color);
+    font-size: 30px; /* Adjust icon size */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect (only size change, no color change) */
+#contact .other_contacts a:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+
+#contact ul li i.fa-envelope {
+    color: var(--background-color);
+    margin-right: 5px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#contact ul li .email {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact ul li i.fa-phone {
+    color: var(--background-color);
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+#contact ul li .phone_number {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
 
 #about-me, #my-projects, #tools, #contact {
     opacity: 0;
@@ -266,8 +578,161 @@ nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.arrow-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 10%;
+}
+
+.arrow-container.left {
+    justify-content: flex-start;
+}
+
+.arrow-container.right {
+    justify-content: flex-end;
+}
+
+/* Arrow button styling */
+.arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.arrow-btn:hover {
+    background-color: #2a6d2a;
+    transform: scale(1.1);
+}
+
+/* Project content styling */
+.project-content, .tool-content {
+    position: relative;
+    min-height: 150px;
+    width: 100%;
+}
+
+.project, .tool {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+    visibility: hidden;
+}
+
+.project.active-project, .tool.active-tool {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Indicator dots styling */
+.project-indicator, .tool-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Adjusting the about-col-2 for the new structure */
+.navigation-container .about-col-2 {
+    flex: 3;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+
+    .navigation-container {
+        flex-direction: column;
+    }
+
+    .arrow-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .arrow-container.left {
+        justify-content: center;
+    }
+
+    .arrow-container.right {
+        justify-content: center;
+    }
+
+    .nav-line-with-arrow.left {
+        flex-direction: row-reverse;
+    }
+
+    .navigation-container .about-col-2 {
+        order: -1;
+        width: 100%;
+    }
+
     .header-content {
         flex-direction: column;
         text-align: center;

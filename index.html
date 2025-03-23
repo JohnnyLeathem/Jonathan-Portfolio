@@ -25,7 +25,7 @@
         <div class="header-content">
             <div class="header-text-container">
                 <div class="header-text">
-                    <h1>Welcome, I am <span class="highlight-name">Jonathan (Johnny) Leathem</span></h1>
+                    <h1>Welcome, I am <span class="highlight-name">Jonathan Leathem</span></h1>
                 </div>
                 <div class="subtitle-text">
                     <p>CS & Math @ UoM</p>
@@ -39,81 +39,177 @@
 
     <!--About ----------------------------------------------------------------------------------------------------------->
     <div id="about-me">
-            <div class="column">
-                <div class="about-col-1">
-                    <h1 class="about-col-1">Who am I?</h1>
-                    <p>Hi! I'm Jonathan (Johnny) Leathem, an outgoing and passionate problem-solver with a love for technology, mathematics, and creativity.
-                         I thrive in collaborative environments, always eager to connect with new people and tackle challenges head-on.
-                         Whether it's developing innovative software, diving deep into complex algorithms, or brainstorming fresh ideas, I bring energy, curiosity, and enthusiasm to everything I do.
-                         My journey in Computer Science and Mathematics at the University of Manchester has fueled my analytical thinking and technical skills, but what truly drives me is the excitement of learning, growing, and making a real impact.
-                         Let's build something amazing together! 🚀
-                </div>
-                <div class="about-col-2">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">Who am I?</h1>
+                <p>Hi! I'm Jonathan (Johnny) Leathem, an outgoing and passionate problem-solver with a love for technology, mathematics, and creativity.
+                    My mission is to make the world a better place through technology and innovation. Other passions of mine include martial arts
+                    (specifically MMA), the gym, and youth leadership. Within the world of technology and mathematics, I am particularly interested in the
+                    eciting world of data science, machine learning and its applications to prediction models, trading and finance. Let's build something great together! &#128512
+                </p>
+                <p>Overall, my code is clean, efficient, and maintainable, backed by a solid understanding of design patterns, data structures, and algorithms. 
+                    Most importantly, I would like to believe I am a pleasant person to work along side. I hope that, by scrolling through my portfolio, you can gather
+                    I sense of who I am as a person and whether or not I make a good fit for your team!
+                </p>
+            </div>
+            <div class="about-col-2">
+                <div class="tabs">
                     <p class="tab-link active-link" onclick="openinfo('experience')">Experience</p>
                     <p class="tab-link" onclick="openinfo('skills')">Skills</p>
                     <p class="tab-link" onclick="openinfo('hobbies')">Hobbies</p>
                 </div>
-                <div class="about-col-3 active-tab" id="experience">
-                    <ul>
-                        <li>Experience content goes here</li>
-                    </ul>
+                <div class="content">
+                    <div class="about-col-3 active-tab" id="experience">
+                        <ul>
+                            <li><span class="top_tab">Current</span>
+                            <p>Discover DRW & Barclays Technology Spring Intern.</p></li>
+                            <li><span class="top_tab">2022</span>
+                            <p>Springpod Technology VWEX.</p></li>
+                            <li><span class="top_tab">2021</span>
+                            <p>Harvard CS50x Course.</p></li>
+                        </ul>
+                    </div>
+                    <div class="about-col-3" id="skills">
+                        <ul>
+                            <li><span class="top_tab">Data Science</span>
+                            <p>Designing and building prediction models and spam filters.</p></li>
+                            <li><span class="top_tab">Web Development</span>
+                            <p>Creating wonderful websites (like this one!), and other web apps such as bias detection applications.</p></li>
+                            <li><span class="top_tab">Product Management</span>
+                            <p>Managing teams and overseeing the software development process.</p></li>
+                        </ul>    
+                    </div>
+                    <div class="about-col-3" id="hobbies">
+                        <ul>
+                            <li><span class="top_tab">Martial Arts</span>
+                            <p>I am an avid martial artist with a background in Taekwondo and MMA.</p></li>
+                            <li><span class="top_tab">Gym</span>
+                            <p>I love a good pump.</p></li>
+                            <li><span class="top_tab">Leadership</span>
+                            <p>I also help lead a youth group with my local church.</p></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="about-col-3" id="skills">
-                    <ul>
-                        <li>Skills content goes here</li>
-                    </ul>    
-                </div>
-                <div class="about-col-3" id="hobbies">
-                    <ul>
-                        <li>Hobbies content goes here</li>
-                    </ul>
-                </div>
-          </div>
+            </div>
+        </div>
     </div>
-
-
+    
     <!---Projects Section -------------------------------------------------------------------------------------------------->
-    <div id = "my-projects">
+    <div id="my-projects">
         <div class="column">
             <div class="about-col-1">
-                <p>Blah projects Blah</p>
-            </div>
-            <div class="about-col-2">
                 <h1 class="about-col-1">My Projects</h1>
+            </div>
+            <div class="navigation-container">
+                <div class="arrow-container left">
+                    <div class="arrow-btn prev-btn" onclick="changeProject(-1)">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="project-content">
+                        <div class="project active-project" id="project-1">
+                            <h3>Project 1</h3>
+                            <p>This is the first project description. It showcases my skills in web development.</p>
+                        </div>
+                        <div class="project" id="project-2">
+                            <h3>Project 2</h3>
+                            <p>This is the second project description. It demonstrates my algorithm optimization abilities.</p>
+                        </div>
+                        <div class="project" id="project-3">
+                            <h3>Project 3</h3>
+                            <p>This is the third project description. It highlights my data visualization expertise.</p>
+                        </div>
+                    </div>
+                    <div class="project-indicator">
+                        <span class="dot active" onclick="jumpToProject(0)"></span>
+                        <span class="dot" onclick="jumpToProject(1)"></span>
+                        <span class="dot" onclick="jumpToProject(2)"></span>
+                    </div>
+                </div>
+                <div class="nav-line-with-arrow right">
+                    <div class="arrow-btn next-btn" onclick="changeProject(1)">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!--My Tools------------------------------------------------------------------------------------------------------>
-    <div id = "tools">
+    <div id="tools">
         <div class="column">
             <div class="about-col-1">
                 <h1 class="about-col-1">Tools of the Trade</h1>
             </div>
-            <div class="about-col-2">
-                <p>Tools...</p>
+            <div class="navigation-container">
+                <div class="arrow-container left">
+                    <div class="arrow-btn prev-btn" onclick="changeTool(-1)">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tool-content">
+                        <div class="tool active-tool" id="tool-1">
+                            <h3>Programming Languages</h3>
+                            <p>JavaScript, Python, Java, C++</p>
+                        </div>
+                        <div class="tool" id="tool-2">
+                            <h3>Development Tools</h3>
+                            <p>VS Code, Git, GitHub, Docker</p>
+                        </div>
+                        <div class="tool" id="tool-3">
+                            <h3>Design Tools</h3>
+                            <p>Figma, Adobe XD, Photoshop</p>
+                        </div>
+                    </div>
+                    <div class="tool-indicator">
+                        <span class="dot active" onclick="jumpToTool(0)"></span>
+                        <span class="dot" onclick="jumpToTool(1)"></span>
+                        <span class="dot" onclick="jumpToTool(2)"></span>
+                    </div>
+                </div>
+                <div class="arrow-container right">
+                    <div class="arrow-btn next-btn" onclick="changeTool(1)">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     
     <!-- Contact --------------------------------------------------------------------------------------------->
-    <div id = "contact">
+    <div id="contact">
         <div class="column">
             <div class="about-col-1">
-                <p>Contact info</p>
-                <ul>
-                    <li><i class="fa-brands fa-github"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                </ul>
+                <h1 class="about-col-1">Contact Me</h1>
             </div>
             <div class="about-col-2">
-                <h1 class="about-col-1">Contact Me</h1>
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i><span class="email"> jonnyletm98@gmail.com</span></li>
+                    <li><i class="fa-solid fa-phone"></i><span class="phone_number"> +44 7710 107 410</span></li>
+                </ul>
+                <ul class="other_contacts">
+                    <li>
+                        <a href="https://github.com/JohnnyLeathem" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/leathemjonny/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/johnny-leathem/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-
+    
     <!--- JS Functionality-->
     <script>
         var tablinks = document.getElementsByClassName("tab-link");
@@ -130,44 +226,94 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-        // First, let's create an Intersection Observer to detect when elements come into view
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('#about-me, #my-projects, #tools, #contact');
-    
-    // Remove the initial animation styling that's currently applied in CSS
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.animation = 'none';
-    });
-    
-    // Create an Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // If the element is in the viewport
-            if (entry.isIntersecting) {
-                // Get the element ID to determine which animation to apply
-                const elementId = entry.target.id;
-                
-                // Apply the appropriate animation based on the element ID
-                if (elementId === 'about-me' || elementId === 'tools') {
-                    entry.target.style.animation = 'fadeInLeft 1s ease-out forwards';
-                } else if (elementId === 'my-projects' || elementId === 'contact') {
-                    entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
-                }
-                
-                // Once the animation has been applied, unobserve the element
-                observer.unobserve(entry.target);
-            }
+        // Project navigation functionality
+        let currentProjectIndex = 0;
+        const projects = document.querySelectorAll('.project');
+        const projectDots = document.querySelectorAll('.project-indicator .dot');
+
+        function changeProject(direction) {
+            projects[currentProjectIndex].classList.remove('active-project');
+            projectDots[currentProjectIndex].classList.remove('active');
+            
+            currentProjectIndex = (currentProjectIndex + direction + projects.length) % projects.length;
+            
+            projects[currentProjectIndex].classList.add('active-project');
+            projectDots[currentProjectIndex].classList.add('active');
+        }
+
+        function jumpToProject(index) {
+            projects[currentProjectIndex].classList.remove('active-project');
+            projectDots[currentProjectIndex].classList.remove('active');
+            
+            currentProjectIndex = index;
+            
+            projects[currentProjectIndex].classList.add('active-project');
+            projectDots[currentProjectIndex].classList.add('active');
+        }
+
+        // Tool navigation functionality
+        let currentToolIndex = 0;
+        const tools = document.querySelectorAll('.tool');
+        const toolDots = document.querySelectorAll('.tool-indicator .dot');
+
+        function changeTool(direction) {
+            tools[currentToolIndex].classList.remove('active-tool');
+            toolDots[currentToolIndex].classList.remove('active');
+            
+            currentToolIndex = (currentToolIndex + direction + tools.length) % tools.length;
+            
+            tools[currentToolIndex].classList.add('active-tool');
+            toolDots[currentToolIndex].classList.add('active');
+        }
+
+        function jumpToTool(index) {
+            tools[currentToolIndex].classList.remove('active-tool');
+            toolDots[currentToolIndex].classList.remove('active');
+            
+            currentToolIndex = index;
+            
+            tools[currentToolIndex].classList.add('active-tool');
+            toolDots[currentToolIndex].classList.add('active');
+        }
+
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#about-me, #my-projects, #tools, #contact');
+            
+            // Remove the initial animation styling that's currently applied in CSS
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.animation = 'none';
+            });
+            
+            // Create an Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // If the element is in the viewport
+                    if (entry.isIntersecting) {
+                        // Get the element ID to determine which animation to apply
+                        const elementId = entry.target.id;
+                        
+                        // Apply the appropriate animation based on the element ID
+                        if (elementId === 'about-me' || elementId === 'tools') {
+                            entry.target.style.animation = 'fadeInLeft 1s ease-out forwards';
+                        } else if (elementId === 'my-projects' || elementId === 'contact') {
+                            entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
+                        }
+                        
+                        // Once the animation has been applied, unobserve the element
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.20
+            });
+            
+            // Attach observer to each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
-    }, {
-        threshold: 0.20
-    });
-    
-    // Observer each section
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-});
     </script>
 </body>
 </html>
