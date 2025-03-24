@@ -496,6 +496,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 50px;
 }
 
 #contact ul {
@@ -528,17 +529,15 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
-/* Style for icons inside links */
 #contact .other_contacts a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     color: var(--background-color);
-    font-size: 30px; /* Adjust icon size */
-    transition: transform 0.2s ease; /* Smooth hover effect */
+    font-size: 30px; 
+    transition: transform 0.2s ease; 
 }
 
-/* Hover effect (only size change, no color change) */
 #contact .other_contacts a:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
+    transform: scale(1.2); 
 }
 
 
@@ -566,14 +565,26 @@ nav ul li a:hover {
 
 
 
+#contact .contact-col-3 {
+    margin-left: 50px;
+}
 
+#contact .resume-button {
+    display: inline-block;
+    color: white;
+    background: var(--background-color);
+    padding: 24px 32px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
 
+}
 
-
-
-
-#about-me, #my-projects, #tools, #contact {
-    opacity: 0;
+#contact .submit-query-form {
+    margin-left: 50px;
 }
 
 
@@ -588,6 +599,41 @@ nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#about-me, #my-projects, #tools, #contact {
+    opacity: 0;
+}
 
 .navigation-container {
     display: flex;
