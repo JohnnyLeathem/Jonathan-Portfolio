@@ -583,9 +583,91 @@ nav ul li a:hover {
 
 }
 
-#contact .submit-query-form {
+#contact .submit-query-form input {
+    display: flex;
+    flex-direction: column;
     margin-left: 50px;
+    background: var(--background-color);
+    height: 20px;
+    width: 619px;
+    margin-bottom: 15px;
+    outline: none;
+    border: none;
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
 }
+
+
+
+#contact .submit-query-form textarea {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    background: var(--background-color);
+    width: 619px; /* MAYBE CHANGE? */
+    min-height: 70px;
+    resize: vertical;
+    outline: none;
+    border: none;
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#contact .submit-query-form input::placeholder,
+#contact .submit-query-form textarea::placeholder {
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.asteroid-meltdown-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    color: #034b12;;
+}
+
+.tkinter-image-container {
+    text-align: right;
+    padding-right: 68px;
+}
+
+.tkinter-rocket-image, .tkinter-asteroid-image {
+    width: 135px;
+    height: 135px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.wing {
+    font-family: 'Sonsie One', cursive;
+    color: #004aad;
+    border-bottom: 2px solid #004aad;
+}
+
+.it {
+    font-family: 'Sonsie One', cursive;
+    color: #e83737;
+    border-bottom: 2px solid #e83737;
+}
+
+.wing-it-image-container {
+    text-align: right;
+}
+
+.wing-it-collection-image {
+    width: 360px;
+    height: 140px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: auto;
+    transform: rotate(12deg); 
+}
+
+
+
 
 
 
@@ -730,7 +812,9 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-
+.project p {
+    padding-top: 10px;
+}
 
 
 
@@ -795,5 +879,11 @@ nav ul li a:hover {
     
     .headshot-image {
         justify-content: center;
+    }
+
+    .tkinter_rocket_image {
+        max-width: 100%;
+        max-height: 100%;
+        margin-left: 5vw;
     }
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan's Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -109,12 +111,23 @@
                 <div class="about-col-2">
                     <div class="project-content">
                         <div class="project active-project" id="project-1">
-                            <h3>Project 1</h3>
-                            <p>This is the first project description. It showcases my skills in web development.</p>
+                            <h3>News Aggregator - <span class="wing">Wing </span> <span class="it">It</span></h3>
+                            <p>Contributed to a group project where I worked within a team of 8 to develop a functional bias detection web application with a 
+                                dynamic JavaScript-based front end, a Python (Flask)-based back end, a MySQL database, and AI integration using
+                                LLMs (OpenAI) for natural language processing tasks. I also helped in implementing the front-end, alongside the data analysis
+                                involved in bias detection and database management.</p>
+                            <div class="wing-it-image-container">
+                                <img class="wing-it-collection-image" src="Images/wing_it_collection.png" alt="Collection of Plans for Group Project">
+                            </div>
                         </div>
                         <div class="project" id="project-2">
-                            <h3>Project 2</h3>
-                            <p>This is the second project description. It demonstrates my algorithm optimization abilities.</p>
+                            <h3>Tkinter Game - <span class="asteroid-meltdown-text">"Asteroid Meltdown"</span></h3>
+                            <p>Built an asteroid game using the Tkinter library in Python that features dynamic difficulty adjustment, object
+                                movement, collision detection, and scoreboards that persist.</p>
+                            <div class="tkinter-image-container">
+                                <img class="tkinter-rocket-image" src="Images/tkinter_rocket.png" alt="Image of Rocketship">
+                                <img class="tkinter-asteroid-image" src="Images/tkinter_asteroid.png" alt="Image of Asteroid">
+                            </div>
                         </div>
                         <div class="project" id="project-3">
                             <h3>Project 3</h3>
@@ -212,7 +225,9 @@
                     Download Resume/CV</a>
             </div>
             <div class="submit-query-form">
-                <form>Send me a query...name...email...message</form>
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <textarea class="your-message" placeholder="Your Message"></textarea>
             </div>
         </div>
     </div>
