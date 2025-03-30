@@ -130,17 +130,17 @@
                             </div>
                         </div>
                         <div class="project" id="project-3">
-                            <h3>Project 3</h3>
-                            <p>This is the third project description. It highlights my data visualization expertise.</p>
+                            <h3>Tesla Stock Predictor</h3>
+                            <p>A Tesla Stock Predictor project that uses historical stock data, financial indicators, and machine learning to predict Tesla's
+                                future stock prices. The project involves data collection, cleaning, feature engineering, model training, and evaluation.
+                                The goal is to build a model that predicts price movements, helping investors make informed decisions.</p>
+                            <div class="tesla-stock-image-container">
+                                <img class="tesla-image" src="Images/tesla_logo.png" alt="Tesla Logo">
+                            </div>
                         </div>
                     </div>
-                    <div class="project-indicator">
-                        <span class="dot active" onclick="jumpToProject(0)"></span>
-                        <span class="dot" onclick="jumpToProject(1)"></span>
-                        <span class="dot" onclick="jumpToProject(2)"></span>
-                    </div>
                 </div>
-                <div class="nav-line-with-arrow right">
+                <div class="arrow-container right">
                     <div class="arrow-btn next-btn" onclick="changeProject(1)">
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
@@ -228,6 +228,7 @@
                 <input type="text" placeholder="Your Name">
                 <input type="text" placeholder="Your Email">
                 <textarea class="your-message" placeholder="Your Message"></textarea>
+                <button class="submit-contact-button">Submit</button>
             </div>
         </div>
     </div>
@@ -248,30 +249,88 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
 
-        // Project navigation functionality
+
+
+
+
+
+
+
+
+
         let currentProjectIndex = 0;
         const projects = document.querySelectorAll('.project');
-        const projectDots = document.querySelectorAll('.project-indicator .dot');
 
         function changeProject(direction) {
-            projects[currentProjectIndex].classList.remove('active-project');
-            projectDots[currentProjectIndex].classList.remove('active');
+            const currentProject = projects[currentProjectIndex];
+            const newIndex = (currentProjectIndex + direction + projects.length) % projects.length;
+            const newProject = projects[newIndex];
+    
+            // Disable transitions during initial setup
+            currentProject.style.transition = 'none';
+            newProject.style.transition = 'none';
             
-            currentProjectIndex = (currentProjectIndex + direction + projects.length) % projects.length;
+            // Position new project off-screen
+            newProject.style.visibility = 'visible';
+            newProject.style.opacity = '1';
+            newProject.style.transform = direction > 0 ? 'translateX(100%)' : 'translateX(-100%)';
             
-            projects[currentProjectIndex].classList.add('active-project');
-            projectDots[currentProjectIndex].classList.add('active');
+            // Force reflow
+            void newProject.offsetWidth;
+            
+            // Enable transitions
+            currentProject.style.transition = '';
+            newProject.style.transition = '';
+            
+            // Animate both projects
+            currentProject.style.transform = direction > 0 ? 'translateX(-100%)' : 'translateX(100%)';
+            currentProject.style.opacity = '0';
+            
+            newProject.style.transform = 'translateX(0)';
+            newProject.style.opacity = '1';
+            
+            // Update visibility after transition
+            currentProject.addEventListener('transitionend', function handler() {
+                currentProject.removeEventListener('transitionend', handler);
+                currentProject.style.visibility = 'hidden';
+            });
+            
+            currentProjectIndex = newIndex;
         }
 
-        function jumpToProject(index) {
-            projects[currentProjectIndex].classList.remove('active-project');
-            projectDots[currentProjectIndex].classList.remove('active');
-            
-            currentProjectIndex = index;
-            
-            projects[currentProjectIndex].classList.add('active-project');
-            projectDots[currentProjectIndex].classList.add('active');
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            projects.forEach((project, index) => {
+                if (index !== currentProjectIndex) {
+                    project.style.opacity = '0';
+                    project.style.visibility = 'hidden';
+                    project.style.transform = 'translateX(100%)';
+                } else {
+                    project.style.opacity = '1';
+                    project.style.visibility = 'visible';
+                    project.style.transform = 'translateX(0)';
+                }
+            });
+        });
+
+        // NOTE: The above implementation does NOT rely on CSS classes and so is better
+        // Therefore, will have to edit this accordingly in styles.css now...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Tool navigation functionality
         let currentToolIndex = 0;

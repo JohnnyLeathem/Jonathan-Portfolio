@@ -111,6 +111,7 @@ body {
     justify-content: flex-end;
     opacity: 0;
     animation: fadeInRight 0.7s ease-out forwards;
+    padding-top: 16px;
 }
 
 @keyframes fadeIn {
@@ -366,11 +367,11 @@ h1.about-col-1 {
 #about-me {
     background: rgba(69, 181, 69, 0.2); /* Light green transparent background */
     border: 2px solid rgba(27, 148, 27, 0.5); /* Slightly darker green border */
+    box-shadow: 0 4px 10px rgba(14, 171, 14, 0.2); /* Soft green shadow */
     border-radius: 15px; /* Rounded edges */
     padding: 20px; /* Space inside the box */
     margin: 30px auto; /* Center the box and give spacing */
     width: 90%; /* Adjust width to fit nicely */
-    box-shadow: 0 4px 10px rgba(14, 171, 14, 0.2); /* Soft green shadow */
     backdrop-filter: blur(5px); /* Adds a glass effect */
 }
 
@@ -396,14 +397,10 @@ h1.about-col-1 {
 }
 
 #my-projects {
-    background: rgba(55, 159, 55, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(22, 148, 22, 0.5); /* Slightly darker green border */
-    border-radius: 15px; /* Rounded edges */
+    background: rgba(20, 52, 20, 0.2); 
     padding: 20px; /* Space inside the box */
-    margin: 30px auto; /* Center the box and give spacing */
-    width: 90%; /* Adjust width to fit nicely */
-    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
-    backdrop-filter: blur(5px); /* Adds a glass effect */
+    margin: 30px 0; /* Vertical spacing only */
+    width: 100%; /* Full width */
 }
 
 nav {
@@ -622,10 +619,44 @@ nav ul li a:hover {
     padding-top: 5px;
 }
 
+#contact .submit-query-form button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 619px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.submit-query-form input,
+.submit-query-form textarea,
+.submit-query-form button {
+    margin-bottom: 15px; /* Adds spacing between elements */
+}
+
+/* Removes margin from the last element */
+.submit-query-form button {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .asteroid-meltdown-text {
     font-family: 'Orbitron', sans-serif;
     font-size: 16px;
-    color: #034b12;;
+    color: #067c20d7;;
 }
 
 .tkinter-image-container {
@@ -643,8 +674,8 @@ nav ul li a:hover {
 
 .wing {
     font-family: 'Sonsie One', cursive;
-    color: #004aad;
-    border-bottom: 2px solid #004aad;
+    color: #1858ad;
+    border-bottom: 2px solid #1858ad;
 }
 
 .it {
@@ -661,9 +692,9 @@ nav ul li a:hover {
     width: 360px;
     height: 140px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: auto;
-    transform: rotate(12deg); 
+    transform: rotate(12deg);
 }
 
 
@@ -675,6 +706,22 @@ nav ul li a:hover {
 
 
 
+.tesla-stock-image-container {
+    text-align: right;
+    padding-right: 68px;
+}
+
+.tesla-image{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.tesla-stock-image-container {
+    position: relative;
+}
 
 
 
@@ -759,14 +806,74 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Project content styling */
-.project-content, .tool-content {
+#my-projects .arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+#my-projects .arrow-btn:hover {
+    transform: scale(1.10);
+}
+
+#my-projects .arrow-btn i {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#my-projects {
+    background-color: rgba(154, 152, 152, 0.743, 0.7);
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+.project-content {
+    position: relative; /* Ensure this is set */
+    min-height: 300px; /* Adjust based on tallest project */
+    width: 100%;
+    overflow: hidden; /* Prevent content from spilling */
+}
+
+
+
+
+
+.tool-content {
     position: relative;
     min-height: 150px;
     width: 100%;
 }
 
-.project, .tool {
+.project {
+    position: absolute;
+    width: 100%;
+    top: 0; /* Ensure projects align at the top */
+    left: 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    visibility: hidden; /* Hide without breaking layout */
+}
+
+.tool {
     position: absolute;
     top: 0;
     left: 0;
@@ -777,7 +884,36 @@ nav ul li a:hover {
     visibility: hidden;
 }
 
-.project.active-project, .tool.active-tool {
+.project.active-project {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    visibility: visible; /* Show active project */
+}
+
+.project.slide-left {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.project.slide-right {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tool.active-tool {
     opacity: 1;
     transform: translateX(0);
     visibility: visible;
