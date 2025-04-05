@@ -165,21 +165,24 @@
                     <div class="tool-content">
                         <div class="tool active-tool" id="tool-1">
                             <h3>Programming Languages</h3>
-                            <p>JavaScript, Python, Java, C++</p>
+                            <ul>
+                                <li><span class="top_tab">Python</span>
+                                <p>I have extensive experience with Python through building several Python projects.</p></li> 
+                                <li><span class="top_tab">Java</span>
+                                <p>I have built a chess game in Java, improving my OOP, logic and reasoning and design skills.</p></li>   
+                            </ul>
                         </div>
                         <div class="tool" id="tool-2">
                             <h3>Development Tools</h3>
-                            <p>VS Code, Git, GitHub, Docker</p>
+                            <ul>
+                                <li><span class="top_tab">Git</span>
+                                <p>I have experience with Git, where I have used it extensively with Bash.</p></li> 
+                                <li><span class="top_tab">GitHub</span>
+                                <p>I have experienc emanaging multiple GitHub repositories and accounts (see "Contact Me" for a link to my GitHub account!)</p></li>
+                                <li><span class="top_tab">VS Code</span>
+                                <p>My IDE of choice is VS Code due to the array of features it offers to developers.</p></li> 
+                            </ul>
                         </div>
-                        <div class="tool" id="tool-3">
-                            <h3>Design Tools</h3>
-                            <p>Figma, Adobe XD, Photoshop</p>
-                        </div>
-                    </div>
-                    <div class="tool-indicator">
-                        <span class="dot active" onclick="jumpToTool(0)"></span>
-                        <span class="dot" onclick="jumpToTool(1)"></span>
-                        <span class="dot" onclick="jumpToTool(2)"></span>
                     </div>
                 </div>
                 <div class="arrow-container right">
@@ -335,26 +338,13 @@
         // Tool navigation functionality
         let currentToolIndex = 0;
         const tools = document.querySelectorAll('.tool');
-        const toolDots = document.querySelectorAll('.tool-indicator .dot');
 
         function changeTool(direction) {
             tools[currentToolIndex].classList.remove('active-tool');
-            toolDots[currentToolIndex].classList.remove('active');
             
             currentToolIndex = (currentToolIndex + direction + tools.length) % tools.length;
             
             tools[currentToolIndex].classList.add('active-tool');
-            toolDots[currentToolIndex].classList.add('active');
-        }
-
-        function jumpToTool(index) {
-            tools[currentToolIndex].classList.remove('active-tool');
-            toolDots[currentToolIndex].classList.remove('active');
-            
-            currentToolIndex = index;
-            
-            tools[currentToolIndex].classList.add('active-tool');
-            toolDots[currentToolIndex].classList.add('active');
         }
 
         // Intersection Observer for scroll animations

@@ -275,9 +275,6 @@ h1.about-col-1 {
 
 
 
-
-
-
 .active-tab {
     display: block; /* Show only the active tab */
     height: 100%;
@@ -791,10 +788,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -802,16 +800,15 @@ nav ul li a:hover {
 }
 
 .arrow-btn:hover {
-    background-color: #2a6d2a;
-    transform: scale(1.1);
+    transform: scale(1.20);
 }
 
 #my-projects .arrow-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: transparent;
     backdrop-filter: blur(5px);
@@ -822,7 +819,7 @@ nav ul li a:hover {
 }
 
 #my-projects .arrow-btn:hover {
-    transform: scale(1.10);
+    transform: scale(1.20);
 }
 
 #my-projects .arrow-btn i {
@@ -851,15 +848,29 @@ nav ul li a:hover {
     overflow: hidden; /* Prevent content from spilling */
 }
 
-
-
-
-
 .tool-content {
     position: relative;
     min-height: 150px;
     width: 100%;
 }
+
+.tool-content ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.tool-content ul li {
+    margin-bottom: 12px;
+}
+
+.tool-content ul p {
+    margin-bottom: 15px;
+}
+
+.tool-content h3 {
+    margin-top: -12px;
+}
+
 
 .project {
     position: absolute;
@@ -924,20 +935,6 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--border-color);
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dot.active {
-    background-color: var(--primary-color);
 }
 
 /* Adjusting the about-col-2 for the new structure */
