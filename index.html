@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="project" id="project-3">
-                            <h3>Tesla Stock Predictor</h3>
+                            <h3>Tesla Stock Predictor - <span class="wheres-elon">"Where's Elon?!?"</span></h3>
                             <p>A Tesla Stock Predictor project that uses historical stock data, financial indicators, and machine learning to predict Tesla's
                                 future stock prices. The project involves data collection, cleaning, feature engineering, model training, and evaluation.
                                 The goal is to build a model that predicts price movements, helping investors make informed decisions.</p>
@@ -228,10 +228,13 @@
                     Download Resume/CV</a>
             </div>
             <div class="submit-query-form">
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <textarea class="your-message" placeholder="Your Message"></textarea>
-                <button class="submit-contact-button">Submit</button>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="your-message" placeholder="Your Message"></textarea>
+                    <button type="submit" class="submit-contact-button">Submit</button>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -385,6 +388,13 @@
                 observer.observe(section);
             });
         });
+
+        // Google sheets submission handling for user entered contact messages
+        const scriptURL = ''
+
+
+
+
     </script>
 </body>
 </html>

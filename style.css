@@ -832,9 +832,17 @@ nav ul li a:hover {
     color: black;
 }
 
+.wheres-elon {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    animation: wiggle 0.4s infinite ease-in-out;
+    display: inline-block;
+}
 
-
-
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+  
 
 
 
