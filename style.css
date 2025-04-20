@@ -73,7 +73,6 @@ body {
     }
 }
 
-
 @keyframes fadeInRight {
     0% {
         opacity: 0;
@@ -85,24 +84,9 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
 .highlight-name {
     color: var(--primary-color);
 }
-
-
-
-
-
-
 
 /* Style for the image container on the right */
 .headshot-image {
@@ -123,8 +107,6 @@ body {
     }
 }
 
-
-
 .headshot-image img {
     max-width: 450px;
     height: 450px;
@@ -132,7 +114,6 @@ body {
     object-fit: cover;
     border: 3px solid var(--background-color);
 }
-
 
 h1.about-col-1 {
     padding: 0;
@@ -147,10 +128,6 @@ h1.about-col-1 {
     font-size: 20px;
 }
 
-
-
-
-
 .top_tab {
     color: var(--primary-color);
     font-weight: bold;
@@ -160,17 +137,6 @@ h1.about-col-1 {
 .about-col-3 li {
     font-size: 16px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .about-col-1, .about-col-2 {
     width: 40%, 60%;
@@ -190,36 +156,6 @@ h1.about-col-1 {
     gap: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .column {
     display: flex;
     flex-direction: row;
@@ -234,47 +170,6 @@ h1.about-col-1 {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .active-tab {
     display: block; /* Show only the active tab */
     height: 100%;
@@ -285,16 +180,9 @@ h1.about-col-1 {
     padding-left: 0;
 }
 
-
-
-
-
-
 .active-tab li {
     margin-bottom: 10px;
 }
-
-
 
 .tab-link {
     cursor: pointer;
@@ -302,11 +190,9 @@ h1.about-col-1 {
     font-size: 18px;
 }
 
-
 .tab-link:hover {
     background: var(--hover-color);
 }
-
 
 .content {
     display: flex;
@@ -338,23 +224,6 @@ h1.about-col-1 {
     border-radius: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Style for the active tab link */
 .tab-link.active-link {
     background-color: var(--hover-color);
@@ -362,14 +231,14 @@ h1.about-col-1 {
 }
 
 #about-me {
-    background: rgba(69, 181, 69, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(27, 148, 27, 0.5); /* Slightly darker green border */
-    box-shadow: 0 4px 10px rgba(14, 171, 14, 0.2); /* Soft green shadow */
-    border-radius: 15px; /* Rounded edges */
-    padding: 20px; /* Space inside the box */
-    margin: 30px auto; /* Center the box and give spacing */
-    width: 90%; /* Adjust width to fit nicely */
-    backdrop-filter: blur(5px); /* Adds a glass effect */
+    background: rgba(69, 181, 69, 0.2);
+    border: 2px solid rgba(27, 148, 27, 0.5); 
+    box-shadow: 0 4px 10px rgba(14, 171, 14, 0.2); 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 30px auto; 
+    width: 90%; 
+    backdrop-filter: blur(5px); 
 }
 
 .repeating-image {
@@ -444,33 +313,6 @@ nav ul li a:hover {
     margin-bottom: 45px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #contact {
     background: black;
     color: white;
@@ -534,7 +376,6 @@ nav ul li a:hover {
     transform: scale(1.2); 
 }
 
-
 #contact ul li i.fa-envelope {
     color: var(--background-color);
     margin-right: 5px;
@@ -556,8 +397,6 @@ nav ul li a:hover {
 #contact ul li .phone_number {
     font-size: 18px;
 }
-
-
 
 #contact .contact-col-3 {
     margin-left: 50px;
@@ -591,8 +430,6 @@ nav ul li a:hover {
     padding-left: 5px;
     padding-top: 5px;
 }
-
-
 
 #contact .submit-query-form textarea {
     display: flex;
@@ -635,20 +472,6 @@ nav ul li a:hover {
 .submit-query-form button {
     margin-bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .asteroid-meltdown-text {
     font-family: 'Orbitron', sans-serif;
@@ -694,15 +517,6 @@ nav ul li a:hover {
     transform: rotate(12deg);
 }
 
-
-
-
-
-
-
-
-
-
 .tesla-stock-image-container {
     text-align: right;
     padding-right: 68px;
@@ -719,43 +533,6 @@ nav ul li a:hover {
 .tesla-stock-image-container {
     position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #about-me, #my-projects, #tools, #contact {
     opacity: 0;
@@ -842,12 +619,6 @@ nav ul li a:hover {
     0%, 100% { transform: rotate(-2deg); }
     50% { transform: rotate(2deg); }
 }
-  
-
-
-
-
-
 
 .project-content {
     position: relative; /* Ensure this is set */
@@ -920,18 +691,6 @@ nav ul li a:hover {
     opacity: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .tool.active-tool {
     opacity: 1;
     transform: translateX(0);
@@ -956,23 +715,6 @@ nav ul li a:hover {
 .project p {
     padding-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {

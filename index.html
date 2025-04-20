@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--------------------------------------------------- Header/ Navigation Section -------------->
+    <!--------------------------------------------------- Header/ Navigation Section ---------------------------------------------------------------------------------------------------------->
     <div id="header">
          <!-- Navigation Bar -->
         <nav>
@@ -23,7 +23,7 @@
             </ul>
         </nav>
         
-        <!-- Content for Header - Restructured to use side-by-side layout -->
+        <!-- Content for Header - Restructured to use side-by-side layout --------------------------------------------------------------------------------------->
         <div class="header-content">
             <div class="header-text-container">
                 <div class="header-text">
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <!--About ----------------------------------------------------------------------------------------------------------->
+    <!--About ------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
     <div id="about-me">
         <div class="column">
             <div class="about-col-1">
@@ -96,7 +96,7 @@
         </div>
     </div>
     
-    <!---Projects Section -------------------------------------------------------------------------------------------------->
+    <!---Projects Section ------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div id="my-projects">
         <div class="column">
             <div class="about-col-1">
@@ -149,7 +149,7 @@
         </div>
     </div>
 
-    <!--My Tools------------------------------------------------------------------------------------------------------>
+    <!--My Tools-------------------------------------------------------------------------------------------------------------------------------------------------->
     <div id="tools">
         <div class="column">
             <div class="about-col-1">
@@ -194,7 +194,7 @@
         </div>
     </div>
     
-    <!-- Contact --------------------------------------------------------------------------------------------->
+    <!-- Contact -------------------------------------------------------------------------------------------------------------------------------------------------------->
     <div id="contact">
         <div class="column">
             <div class="about-col-1">
@@ -239,7 +239,7 @@
         </div>
     </div>
     
-    <!--- JS Functionality-->
+    <!--- JS Functionality-------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <script>
         var tablinks = document.getElementsByClassName("tab-link");
         var tablecontents = document.getElementsByClassName("about-col-3");
@@ -254,15 +254,6 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
-
-
-
-
-
-
-
-
 
         let currentProjectIndex = 0;
         const projects = document.querySelectorAll('.project');
@@ -317,26 +308,8 @@
                 }
             });
         });
-
         // NOTE: The above implementation does NOT rely on CSS classes and so is better
         // Therefore, will have to edit this accordingly in styles.css now...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // Tool navigation functionality
         let currentToolIndex = 0;
@@ -391,10 +364,6 @@
 
         // Google sheets submission handling for user entered contact messages
         const scriptURL = ''
-
-
-
-
     </script>
 </body>
 </html>
