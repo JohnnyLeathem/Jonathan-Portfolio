@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan's Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--------------------------------------------------- Header/ Navigation Section ---------------------------------------------------------------------------------------------------------->
+    <div id="header">
+         <!-- Navigation Bar -->
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#my-projects">Portfolio</a></li>
+                <li><a href="#tools">My Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Content for Header - Restructured to use side-by-side layout --------------------------------------------------------------------------------------->
+        <div class="header-content">
+            <div class="header-text-container">
+                <div class="header-text">
+                    <h1>Welcome, I am <span class="highlight-name">Jonathan Leathem</span></h1>
+                </div>
+                <div class="subtitle-text">
+                    <p>CS & Math @ UoM</p>
+                </div>
+            </div>
+            <div class="headshot-image">
+                <img src="Images/Student ID Photo.jpg" alt="Jonathan Leathem">
+            </div>
+        </div>
+    </div>
+
+    <!--About ------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+    <div id="about-me">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">Who am I?</h1>
+                <p>Hi! I'm Jonathan (Johnny) Leathem, an outgoing and passionate problem-solver with a love for technology, mathematics, and creativity.
+                    My mission is to make the world a better place through technology and innovation. Other passions of mine include martial arts
+                    (specifically MMA), the gym, and youth leadership. Within the world of technology and mathematics, I am particularly interested in the
+                    eciting world of data science, machine learning and its applications to prediction models, trading and finance. Let's build something great together! &#128512
+                </p>
+                <p>Overall, my code is clean, efficient, and maintainable, backed by a solid understanding of design patterns, data structures, and algorithms. 
+                    Most importantly, I would like to believe I am a pleasant person to work along side. I hope that, by scrolling through my portfolio, you can gather
+                    I sense of who I am as a person and whether or not I make a good fit for your team!
+                </p>
+            </div>
+            <div class="about-col-2">
+                <div class="tabs">
+                    <p class="tab-link active-link" onclick="openinfo('experience')">Experience</p>
+                    <p class="tab-link" onclick="openinfo('skills')">Skills</p>
+                    <p class="tab-link" onclick="openinfo('hobbies')">Hobbies</p>
+                </div>
+                <div class="content">
+                    <div class="about-col-3 active-tab" id="experience">
+                        <ul>
+                            <li><span class="top_tab">Current</span>
+                            <p>Discover DRW & Barclays Technology Spring Intern.</p></li>
+                            <li><span class="top_tab">2022</span>
+                            <p>Springpod Technology VWEX.</p></li>
+                            <li><span class="top_tab">2021</span>
+                            <p>Harvard CS50x Course.</p></li>
+                        </ul>
+                    </div>
+                    <div class="about-col-3" id="skills">
+                        <ul>
+                            <li><span class="top_tab">Data Science</span>
+                            <p>Designing and building prediction models and spam filters.</p></li>
+                            <li><span class="top_tab">Web Development</span>
+                            <p>Creating wonderful websites (like this one!), and other web apps such as bias detection applications.</p></li>
+                            <li><span class="top_tab">Product Management</span>
+                            <p>Managing teams and overseeing the software development process.</p></li>
+                        </ul>    
+                    </div>
+                    <div class="about-col-3" id="hobbies">
+                        <ul>
+                            <li><span class="top_tab">Martial Arts</span>
+                            <p>I am an avid martial artist with a background in Taekwondo and MMA.</p></li>
+                            <li><span class="top_tab">Gym</span>
+                            <p>I love a good pump.</p></li>
+                            <li><span class="top_tab">Leadership</span>
+                            <p>I also help lead a youth group with my local church.</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!---Projects Section ------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div id="my-projects">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">My Projects</h1>
+            </div>
+            <div class="navigation-container">
+                <div class="arrow-container left">
+                    <div class="arrow-btn prev-btn" onclick="changeProject(-1)">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="project-content">
+                        <div class="project active-project" id="project-1">
+                            <h3>News Aggregator - <span class="wing">Wing </span> <span class="it">It</span></h3>
+                            <p>Contributed to a group project where I worked within a team of 8 to develop a functional bias detection web application with a 
+                                dynamic JavaScript-based front end, a Python (Flask)-based back end, a MySQL database, and AI integration using
+                                LLMs (OpenAI) for natural language processing tasks. I also helped in implementing the front-end, alongside the data analysis
+                                involved in bias detection and database management.</p>
+                            <div class="wing-it-image-container">
+                                <img class="wing-it-collection-image" src="Images/wing_it_collection.png" alt="Collection of Plans for Group Project">
+                            </div>
+                        </div>
+                        <div class="project" id="project-2">
+                            <h3>Tkinter Game - <span class="asteroid-meltdown-text">"Asteroid Meltdown"</span></h3>
+                            <p>Built an asteroid game using the Tkinter library in Python that features dynamic difficulty adjustment, object
+                                movement, collision detection, and scoreboards that persist.</p>
+                            <div class="tkinter-image-container">
+                                <img class="tkinter-rocket-image" src="Images/tkinter_rocket.png" alt="Image of Rocketship">
+                                <img class="tkinter-asteroid-image" src="Images/tkinter_asteroid.png" alt="Image of Asteroid">
+                            </div>
+                        </div>
+                        <div class="project" id="project-3">
+                            <h3>Tesla Stock Predictor - <span class="wheres-elon">"Where's Elon?!?"</span></h3>
+                            <p>A Tesla Stock Predictor project that uses historical stock data, financial indicators, and machine learning to predict Tesla's
+                                future stock prices. The project involves data collection, cleaning, feature engineering, model training, and evaluation.
+                                The goal is to build a model that predicts price movements, helping investors make informed decisions.</p>
+                            <div class="tesla-stock-image-container">
+                                <img class="tesla-image" src="Images/tesla_logo.png" alt="Tesla Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-container right">
+                    <div class="arrow-btn next-btn" onclick="changeProject(1)">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--My Tools-------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div id="tools">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">Tools of the Trade</h1>
+            </div>
+            <div class="navigation-container">
+                <div class="arrow-container left">
+                    <div class="arrow-btn prev-btn" onclick="changeTool(-1)">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <div class="tool-content">
+                        <div class="tool active-tool" id="tool-1">
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li><span class="top_tab">Python</span>
+                                <p>I have extensive experience with Python through building several Python projects.</p></li> 
+                                <li><span class="top_tab">Java</span>
+                                <p>I have built a chess game in Java, improving my OOP, logic and reasoning and design skills.</p></li>   
+                            </ul>
+                        </div>
+                        <div class="tool" id="tool-2">
+                            <h3>Development Tools</h3>
+                            <ul>
+                                <li><span class="top_tab">Git</span>
+                                <p>I have experience with Git, where I have used it extensively with Bash.</p></li> 
+                                <li><span class="top_tab">GitHub</span>
+                                <p>I have experienc emanaging multiple GitHub repositories and accounts (see "Contact Me" for a link to my GitHub account!)</p></li>
+                                <li><span class="top_tab">VS Code</span>
+                                <p>My IDE of choice is VS Code due to the array of features it offers to developers.</p></li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-container right">
+                    <div class="arrow-btn next-btn" onclick="changeTool(1)">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact -------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div id="contact">
+        <div class="column">
+            <div class="about-col-1">
+                <h1 class="about-col-1">Contact Me</h1>
+            </div>
+            <div class="about-col-2">
+                <ul>
+                    <li><i class="fa-solid fa-envelope"></i><span class="email"> jonnyletm98@gmail.com</span></li>
+                    <li><i class="fa-solid fa-phone"></i><span class="phone_number"> +44 7710 107 410</span></li>
+                </ul>
+                <ul class="other_contacts">
+                    <li>
+                        <a href="https://github.com/JohnnyLeathem" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/leathemjonny/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/johnny-leathem/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-col-3">
+                <a href="Images/tech-cv-Jonathan-Leathem.pdf" download="tech-cv-Jonathan-Leathem" class="resume-button">
+                    Download Resume/CV</a>
+            </div>
+            <div class="submit-query-form">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="your-message" placeholder="Your Message"></textarea>
+                    <button type="submit" class="submit-contact-button">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    
+    <!--- JS Functionality-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-link");
+        var tablecontents = document.getElementsByClassName("about-col-3");
+        
+        function openinfo(tabname) {
+            for(var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            for(var i = 0; i < tablecontents.length; i++) {
+                tablecontents[i].classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        let currentProjectIndex = 0;
+        const projects = document.querySelectorAll('.project');
+
+        function changeProject(direction) {
+            const currentProject = projects[currentProjectIndex];
+            const newIndex = (currentProjectIndex + direction + projects.length) % projects.length;
+            const newProject = projects[newIndex];
+    
+            // Disable transitions during initial setup
+            currentProject.style.transition = 'none';
+            newProject.style.transition = 'none';
+            
+            // Position new project off-screen
+            newProject.style.visibility = 'visible';
+            newProject.style.opacity = '1';
+            newProject.style.transform = direction > 0 ? 'translateX(100%)' : 'translateX(-100%)';
+            
+            // Force reflow
+            void newProject.offsetWidth;
+            
+            // Enable transitions
+            currentProject.style.transition = '';
+            newProject.style.transition = '';
+            
+            // Animate both projects
+            currentProject.style.transform = direction > 0 ? 'translateX(-100%)' : 'translateX(100%)';
+            currentProject.style.opacity = '0';
+            
+            newProject.style.transform = 'translateX(0)';
+            newProject.style.opacity = '1';
+            
+            // Update visibility after transition
+            currentProject.addEventListener('transitionend', function handler() {
+                currentProject.removeEventListener('transitionend', handler);
+                currentProject.style.visibility = 'hidden';
+            });
+            
+            currentProjectIndex = newIndex;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            projects.forEach((project, index) => {
+                if (index !== currentProjectIndex) {
+                    project.style.opacity = '0';
+                    project.style.visibility = 'hidden';
+                    project.style.transform = 'translateX(100%)';
+                } else {
+                    project.style.opacity = '1';
+                    project.style.visibility = 'visible';
+                    project.style.transform = 'translateX(0)';
+                }
+            });
+        });
+        // NOTE: The above implementation does NOT rely on CSS classes and so is better
+        // Therefore, will have to edit this accordingly in styles.css now...
+
+        // Tool navigation functionality
+        let currentToolIndex = 0;
+        const tools = document.querySelectorAll('.tool');
+
+        function changeTool(direction) {
+            tools[currentToolIndex].classList.remove('active-tool');
+            
+            currentToolIndex = (currentToolIndex + direction + tools.length) % tools.length;
+            
+            tools[currentToolIndex].classList.add('active-tool');
+        }
+
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('#about-me, #my-projects, #tools, #contact');
+            
+            // Remove the initial animation styling that's currently applied in CSS
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.animation = 'none';
+            });
+            
+            // Create an Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // If the element is in the viewport
+                    if (entry.isIntersecting) {
+                        // Get the element ID to determine which animation to apply
+                        const elementId = entry.target.id;
+                        
+                        // Apply the appropriate animation based on the element ID
+                        if (elementId === 'about-me' || elementId === 'tools') {
+                            entry.target.style.animation = 'fadeInLeft 1s ease-out forwards';
+                        } else if (elementId === 'my-projects' || elementId === 'contact') {
+                            entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
+                        }
+                        
+                        // Once the animation has been applied, unobserve the element
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.20
+            });
+            
+            // Attach observer to each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Google sheets submission handling for user entered contact messages
+        const scriptURL = ''
+    </script>
+</body>
+</html>
