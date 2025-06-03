@@ -17,3 +17,8 @@ This is my personal portfolio website, built with standard, good ol' fashioned J
 ├──style.css/ # Stylesheet for the site
 └──README.md/ # Project overview and documentation
 ```
+
+## Notable Features
+
+- 
+
