@@ -1,7 +1,7 @@
 :root {
     --primary-color: #154920;
     --background-color: #b3cebba1;
-    --sidebar-color: #92b09ba1;
+    --sidebar-color: #b0a792a1;
     --text-color: #14171a;
     --secondary-text: #657786;
     --border-color: #e1e8ed;
@@ -23,14 +23,14 @@ body {
     background: var(--background-color);
 }
 
-/* Modified header section to use flexbox layout */
+/* --------------------------------------header section--------------------------------------------------------  */
+
 #header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Create a container for the header content */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,6 @@ body {
     margin: 20px auto;
 }
 
-/* Style for the text container on the left */
 .header-text-container {
     flex: 1;
     padding-right: 35px;
@@ -119,6 +118,9 @@ h1.about-col-1 {
     padding: 0;
     padding-bottom: 10px;
 }
+
+
+/* --------------------------------------about section--------------------------------------------------------  */
 
 .about-col-1 p:first-of-type {
     margin-bottom: 15px;
@@ -224,7 +226,6 @@ h1.about-col-1 {
     border-radius: 10px;
 }
 
-/* Style for the active tab link */
 .tab-link.active-link {
     background-color: var(--hover-color);
     font-weight: bold;
@@ -262,11 +263,14 @@ h1.about-col-1 {
     background-size: auto 100%;
 }
 
+
+/* --------------------------------------projects section--------------------------------------------------------  */
+
 #my-projects {
     background: rgba(20, 52, 20, 0.2); 
-    padding: 20px; /* Space inside the box */
-    margin: 30px 0; /* Vertical spacing only */
-    width: 100%; /* Full width */
+    padding: 20px; 
+    margin: 30px 0; 
+    width: 100%; 
 }
 
 nav {
@@ -302,23 +306,25 @@ nav ul li a:hover {
 }
 
 #tools {
-    background: rgba(42, 124, 42, 0.2); /* Light green transparent background */
-    border: 2px solid rgba(18, 125, 18, 0.5); /* Slightly darker green border */
-    border-radius: 15px; /* Rounded edges */
-    padding: 20px; /* Space inside the box */
-    margin: 30px auto; /* Center the box and give spacing */
-    width: 90%; /* Adjust width to fit nicely */
-    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); /* Soft green shadow */
-    backdrop-filter: blur(5px); /* Adds a glass effect */
+    background: rgba(42, 124, 42, 0.2);
+    border: 2px solid rgba(18, 125, 18, 0.5); 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 30px auto; 
+    width: 90%; 
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.2); 
+    backdrop-filter: blur(5px); 
     margin-bottom: 45px;
 }
+
+/* --------------------------------------contact section--------------------------------------------------------  */
 
 #contact {
     background: black;
     color: white;
-    padding: 60px 20px; /* Space inside the box */
+    padding: 60px 20px; 
     margin: 0;
-    width: 100%; /* Adjust width to fit nicely */
+    width: 100%;
     position: relative;
     min-width: 100vh;
     display: flex;
@@ -465,13 +471,15 @@ nav ul li a:hover {
 .submit-query-form input,
 .submit-query-form textarea,
 .submit-query-form button {
-    margin-bottom: 15px; /* Adds spacing between elements */
+    margin-bottom: 15px; 
 }
 
-/* Removes margin from the last element */
 .submit-query-form button {
     margin-bottom: 0;
 }
+
+
+/* --------------------------------------some image assets--------------------------------------------------------  */
 
 .asteroid-meltdown-text {
     font-family: 'Orbitron', sans-serif;
@@ -534,7 +542,7 @@ nav ul li a:hover {
     position: relative;
 }
 
-#about-me, #my-projects, #tools, #contact {
+#about-me, #my-projects, #tools {
     opacity: 0;
 }
 
@@ -560,7 +568,6 @@ nav ul li a:hover {
     justify-content: flex-end;
 }
 
-/* Arrow button styling */
 .arrow-btn {
     display: flex;
     justify-content: center;
@@ -621,16 +628,31 @@ nav ul li a:hover {
 }
 
 .project-content {
-    position: relative; /* Ensure this is set */
-    min-height: 300px; /* Adjust based on tallest project */
+    position: relative;
+    min-height: 300px;
     width: 100%;
-    overflow: hidden; /* Prevent content from spilling */
+    overflow: hidden; 
 }
+
+
+
+
+
+
+/* --------------------------------------tools section--------------------------------------------------------  */
+
 
 .tool-content {
     position: relative;
-    min-height: 150px;
+    min-height: 150px; 
     width: 100%;
+    overflow: hidden;
+}
+
+.tool h3 {
+    margin-top: 0.5em; 
+    padding-top: 7px;   
+    line-height: 1.3; 
 }
 
 .tool-content ul {
@@ -649,7 +671,6 @@ nav ul li a:hover {
 .tool-content h3 {
     margin-top: -12px;
 }
-
 
 .project {
     position: absolute;
@@ -697,7 +718,6 @@ nav ul li a:hover {
     visibility: visible;
 }
 
-/* Indicator dots styling */
 .project-indicator, .tool-indicator {
     display: flex;
     justify-content: center;
@@ -716,57 +736,263 @@ nav ul li a:hover {
     padding-top: 10px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
 
-    .navigation-container {
+/*--------------------------css for small screens--------------------------- */
+
+
+@media only screen and (max-width: 600px) {
+
+    /*--------Adjustments for Header/ Navigation Section-------------------*/
+
+    nav ul#sidemenu {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        font-size: 1rem;
     }
 
-    .arrow-container {
-        max-width: 100%;
+    nav ul#sidemenu li {
         width: 100%;
-        margin: 10px 0;
+        text-align: center;
     }
 
-    .arrow-container.left {
-        justify-content: center;
-    }
-
-    .arrow-container.right {
-        justify-content: center;
-    }
-
-    .nav-line-with-arrow.left {
-        flex-direction: row-reverse;
-    }
-
-    .navigation-container .about-col-2 {
-        order: -1;
-        width: 100%;
+    nav ul#sidemenu li a {
+        display: block;
+        padding: 10px 0;
     }
 
     .header-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 20px;
+        padding: 0 15px;
     }
-    
+
     .header-text-container {
-        padding-right: 0;
-        margin-bottom: 20px;
+        padding: 0;
+        margin-bottom: 10px;
     }
-    
-    .header-text, .subtitle-text {
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle-text p {
+        font-size: 1rem;
+    }
+
+    .headshot-image img {
+        width: 80%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    /*--------Adjustments for About Section-------------------*/
+
+    #about-me .column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        width: 100%;
+    }
+
+    .about-col-1 h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .about-col-1 p {
+        font-size: 1rem;
+        line-height: 1.6;
         text-align: center;
     }
-    
-    .headshot-image {
+
+    .tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .tab-link {
+        padding: 10px;
+        font-size: 1rem;
+        text-align: left;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .about-col-3 ul {
+        padding-left: 20px;
+    }
+
+    .about-col-3 li {
+        margin-bottom: 15px;
+    }
+
+    .top_tab {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .content li {
+        text-align: left;
+    }
+
+    /*--------Adjustments for Projects Section-------------------*/
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-col-1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .project-content {
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .project {
+        margin-bottom: 15px;
+    }
+
+    .project img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .navigation-container {
+        width: 100%;
+    }
+
+    .arrow-container {
+        display: flex;            
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .arrow-btn {
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .about-col-2,
+    .project-content,
+    .project {
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .wing-it-image-container,
+    .tkinter-image-container,
+    .tesla-stock-image-container {
+        opacity: 0;
+    }
+
+    .wing-it-collection-image,
+    .tkinter-rocket-image,
+    .tkinter-asteroid-image,
+    .tesla-image {
+        opacity: 0;
+    }
+
+    /*--------Adjustments for Tools Section-------------------*/
+
+    .navigation-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .arrow-container.left,
+    .arrow-container.right {
+        width: 50%;
+        display: flex;
         justify-content: center;
     }
 
-    .tkinter_rocket_image {
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: 5vw;
+    .arrow-btn {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        width: 40px;
+        height: 40px;
     }
+
+    .arrow-btn i {
+        font-size: 0.85rem;
+    }
+
+    .about-col-2 {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .tool-content {
+        max-height: 80vh;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .tool {
+        text-align: center; 
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .top_tab {
+        display: block;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+
+    ul {
+        padding-left: 0; 
+        list-style-position: inside; 
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    /*--------Adjustments for Contact Section-------------------*/
+
+    .submit-query-form {
+        width: 100px; 
+        font-size: 1rem;
+    }
+
 }
