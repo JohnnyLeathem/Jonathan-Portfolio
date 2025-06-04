@@ -21,4 +21,4 @@ This is my personal portfolio website, built with standard, good ol' fashioned J
 ## Notable Features 
 
 - **Contact Form** for sending messages and requests
-- **Responsive Design** optimized for desktop
+- **Responsive Design** optimized for desktop and mobile
