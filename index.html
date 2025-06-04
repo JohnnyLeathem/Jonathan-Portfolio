@@ -168,8 +168,8 @@
                             <ul>
                                 <li><span class="top_tab">Python</span>
                                 <p>I have extensive experience with Python through building several Python projects.</p></li> 
-                                <li><span class="top_tab">Java</span>
-                                <p>I have built a chess game in Java, improving my OOP, logic and reasoning and design skills.</p></li>   
+                                <li><span class="top_tab">Java & C</span>
+                                <p>I have built a chess game in Java, improving my OOP, logic and reasoning and design skills.</p></li>
                             </ul>
                         </div>
                         <div class="tool" id="tool-2">
@@ -325,7 +325,7 @@
 
         // Intersection Observer for scroll animations
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('#about-me, #my-projects, #tools, #contact');
+            const sections = document.querySelectorAll('#about-me, #my-projects, #tools');
             
             // Remove the initial animation styling that's currently applied in CSS
             sections.forEach(section => {
@@ -344,7 +344,7 @@
                         // Apply the appropriate animation based on the element ID
                         if (elementId === 'about-me' || elementId === 'tools') {
                             entry.target.style.animation = 'fadeInLeft 1s ease-out forwards';
-                        } else if (elementId === 'my-projects' || elementId === 'contact') {
+                        } else if (elementId === 'my-projects') {
                             entry.target.style.animation = 'fadeInRight 1s ease-out forwards';
                         }
                         
