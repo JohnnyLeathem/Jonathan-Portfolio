@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -991,7 +995,7 @@ nav ul li a:hover {
     /*--------Adjustments for Contact Section-------------------*/
 
     .submit-query-form {
-        width: 100px; 
+        width: 50px; 
         font-size: 1rem;
     }
 
