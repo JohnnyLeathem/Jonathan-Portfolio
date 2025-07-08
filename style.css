@@ -321,6 +321,28 @@ nav ul li a:hover {
     margin-bottom: 45px;
 }
 
+.about-col-2 .project-content .project h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-col-2 .project-content .project h3 .click-me-arrow {
+    font-weight: 800;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+    position: relative;
+    top: -7px;
+    transform: rotate(-18deg);
+    display: inline-block;
+}
+
+.about-col-2 .project-content .project h3 .click-text {
+    font-size: 10px;
+    user-select: none;
+    position: relative;
+    top: -12px;
+}
+
 /* --------------------------------------contact section--------------------------------------------------------  */
 
 #contact {
@@ -928,6 +950,14 @@ nav ul li a:hover {
     .tkinter-rocket-image,
     .tkinter-asteroid-image,
     .tesla-image {
+        opacity: 0;
+    }
+
+    .about-col-2 .project-content .project h3 .click-me-arrow {
+        opacity: 0;
+    }
+
+    .about-col-2 .project-content .project h3 .click-text {
         opacity: 0;
     }
 
