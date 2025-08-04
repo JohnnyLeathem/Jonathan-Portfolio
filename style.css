@@ -1024,9 +1024,128 @@ nav ul li a:hover {
 
     /*--------Adjustments for Contact Section-------------------*/
 
-    .submit-query-form {
-        width: 50px; 
-        font-size: 1rem;
+    /* Contact section layout */
+    #contact {
+        padding: 40px 15px;
+        padding-left: 15px; /* Remove the 3% left padding */
     }
-
+    
+    #contact .column {
+        gap: 30px;
+    }
+    
+    /* Contact info section */
+    #contact .about-col-2 {
+        margin-left: 0; /* Remove the 50px margin */
+        padding: 0 10px;
+    }
+    
+    #contact ul li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+    
+    #contact ul li i.fa-envelope,
+    #contact ul li i.fa-phone {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    #contact ul li .email,
+    #contact ul li .phone_number {
+        font-size: 16px;
+        word-break: break-all; /* Allow long emails to break */
+    }
+    
+    /* Social links */
+    #contact .other_contacts {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    #contact .other_contacts i {
+        font-size: 28px;
+    }
+    
+    /* Resume/CV button */
+    #contact .contact-col-3 {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    
+    #contact .resume-button {
+        width: 100%;
+        text-align: center;
+        padding: 18px 24px;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+    
+    /* Contact form - COMPLETE REDESIGN FOR MOBILE */
+    #contact .submit-query-form {
+        margin-left: 0;
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    #contact .submit-query-form form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    #contact .submit-query-form input,
+    #contact .submit-query-form textarea {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 0;
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 5px;
+        box-sizing: border-box;
+        min-height: 44px; /* Better touch target */
+    }
+    
+    #contact .submit-query-form textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+    
+    #contact .submit-query-form button {
+        width: 100%;
+        margin-left: 0;
+        padding: 14px;
+        font-size: 1rem;
+        border-radius: 5px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        cursor: pointer;
+        min-height: 44px;
+        box-sizing: border-box;
+    }
+    
+    #contact .submit-query-form button:hover {
+        background: #0f3a15; /* Darker shade of primary color */
+    }
+    
+    /* Form labels and styling improvements */
+    #contact .submit-query-form input::placeholder,
+    #contact .submit-query-form textarea::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+    }
+    
+    /* Message confirmation */
+    #contact #msg {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
 }
